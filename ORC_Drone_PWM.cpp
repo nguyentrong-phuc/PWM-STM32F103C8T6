@@ -5,11 +5,9 @@
   Released into the public domain.
   PWM_min = 0; PWM_max = 1800
 -------------------------------------------------------------*/
-
 #include "Arduino.h"
 #include "ORC_Drone_PWM.h"
 #include "ORCType.h"
-
 /*----------------------------------------
 Initialization
 ------------------------------------------*/
@@ -18,7 +16,6 @@ ORC_Drone_PWM::ORC_Drone_PWM()
   _PWM_min = 100; //Set PWM_min value (default: 100);
   _PWM_max = 1800; //Set PWM_max value (default: 1800);
 }
-
 /*----------------------------------------
 BEGIN OF PWM FUNCTIONS
 ------------------------------------------*/
@@ -29,7 +26,7 @@ BEGIN OF PWM FUNCTIONS
     this->STMPwmTimer3Setup();
   }
   /*----------------------------------------------------------
-  * CAI DAT TIMER 3 CHO PWM: CHANNEL 1->4
+   * CAI DAT TIMER 3 CHO PWM: CHANNEL 1->4
   CH1->PA6     CH2->PA7     CH3->PB0      CH4->PB1
   -----------------------------------------------------------*/
   void ORC_Drone_PWM::STMPwmTimer3Setup()
@@ -82,7 +79,7 @@ BEGIN OF PWM FUNCTIONS
     TIM3->CR1 |= TIM_CR1_CEN | TIM_CR1_ARPE;
   }
   /*----------------------------------------------------------
-  Dat gia tri cho cac chan
+   * Dat gia tri cho cac chan
   -----------------------------------------------------------*/
   void ORC_Drone_PWM::setPWM(unsigned int Pwm1, unsigned int Pwm2, unsigned int Pwm3, unsigned int Pwm4)
   {
@@ -140,7 +137,7 @@ BEGIN OF PWM FUNCTIONS
     #endif
   }
   /*----------  ------------------------------------------------
-  * CAI DAT TIMMER 4 CHO PWM: OC4A -> D6; OC4B -> D7
+   * CAI DAT TIMMER 4 CHO PWM: OC4A -> D6; OC4B -> D7
   -----------------------------------------------------------*/
   void ORC_Drone_PWM::PwmTimer4Setup()
   {
@@ -171,7 +168,7 @@ BEGIN OF PWM FUNCTIONS
     #endif
   }
   /*----------------------------------------------------------
-                Dat gia tri cho cac chan
+   * Dat gia tri cho cac chan
   -----------------------------------------------------------*/
   void ORC_Drone_PWM::setPWM(unsigned int Pwm1, unsigned int Pwm2, unsigned int Pwm3, unsigned int Pwm4)
   {                     
