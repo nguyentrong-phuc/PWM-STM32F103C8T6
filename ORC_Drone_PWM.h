@@ -27,6 +27,4 @@ class ORC_Drone_PWM
   	void STMPwmTimer3Setup(); // Channel_1->PA6     CH2->PA7     CH3->PB0      CH4->PB1
 };
 
-
-
 #endif
