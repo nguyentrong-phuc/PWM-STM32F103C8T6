@@ -24,7 +24,7 @@ class ORC_Drone_PWM
     unsigned int _PWM_min, _PWM_max;
 	void PwmTimer1Setup(); //CAI DAT TIMMER 1 CHO PWM: OC1A -> D11; OC1B -> D12
 	void PwmTimer4Setup(); //CAI DAT TIMMER 4 CHO PWM: OC4A -> D6; OC4B -> D7
-  void STMPwmTimer3Setup(); // Channel_1->PA6     CH2->PA7     CH3->PB0      CH4->PB1
+  	void STMPwmTimer3Setup(); // Channel_1->PA6     CH2->PA7     CH3->PB0      CH4->PB1
 };
 
 
